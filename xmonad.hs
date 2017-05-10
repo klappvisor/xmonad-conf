@@ -11,6 +11,7 @@ main = do
   xmonad $ gnomeConfig
     { terminal = "gnome-terminal"
     , modMask  = mod4Mask
+    , focusedBorderColor = "#E95420" -- ubuntu orange
     , layoutHook = unityLayout
     , startupHook = myStartupHook
     , keys = myKeys <+> keys gnomeConfig
@@ -43,7 +44,7 @@ unityManageHook = composeAll . concat $
     onWs9 = passMgr
     -- classnames
     web = [ "Firefox", "Google-chrome" ]
-    dev = [ "Atom", "jetbrains-idea-ce" ]
+    dev = [ "Atom", "jetbrains-idea-ce", "jetbrains-idea" ]
     fileMgr = [ "Nautilus" ]
     chats = [ "Telegram", "Skype" ]
     slack = [ ]
